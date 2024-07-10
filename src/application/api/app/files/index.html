@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для задач</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Приложение для задач</h1>
+        </header>
+        <div id="auth-container">
+            <div id="register-form">
+                <h2>Регистрация</h2>
+                <input type="email" id="register-email" placeholder="Введите почту">
+                <input type="password" id="register-password" placeholder="Введите пароль">
+                <button id="register-button">Регистрация</button>
+                <p>Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+            </div>
+            <div id="login-form" style="display:none;">
+                <h2>Авторизация</h2>
+                <input type="email" id="login-email" placeholder="Введите почту">
+                <input type="password" id="login-password" placeholder="Введите пароль">
+                <button id="login-button">Войти</button>
+                <p>Нет аккаунта? <a href="#" id="show-register">Зарегистрироваться</a></p>
+            </div>
+        </div>
+        <main id="todo-app" style="display:none;">
+            <button type="button" id="logout-button">Выйти</button>
+            <div class="todo-input">
+                <input type="text" id="new-todo" placeholder="Добавить новое дело">
+                <input type="datetime-local" id="deadline">
+                <select id="category-select">
+                    <option value="" disabled selected>Выберите категорию</option>
+                </select>
+                <button id="add-todo">Добавить</button>
+            </div>
+            <div class="category-input">
+                <input type="text" id="new-category" placeholder="Добавить новую категорию">
+                <button id="add-category">Добавить категорию</button>
+            </div>
+            <div class="todo-categories">
+                <h2>Категории</h2>
+                <ul id="category-list"></ul>
+            </div>
+            <div class="todo-list">
+                <h2>Список дел</h2>
+                <ul id="todo-list"></ul>
+            </div>
+            <div class="todo-count">
+                <p>Всего дел: <span id="todo-count">0</span></p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
